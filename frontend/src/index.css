@@ -1,0 +1,14 @@
+:root {
+    --colorPrincipal: #FDC28C;
+    --colorBoton: #F67600;
+    --white: #fff;
+    --black: #000;
+    --logo: #ff4501;
+}
+* {
+    margin:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}

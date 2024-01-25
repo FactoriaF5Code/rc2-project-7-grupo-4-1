@@ -1,0 +1,29 @@
+.menuLateral {
+    width: 100%;
+    max-width: 25rem;
+    background-color: var(--colorPrincipal);
+    height: 5%;
+    top:0;
+    left: 0;
+    transition: all 500ms ease;
+    transform: translateY(15%);
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: var(--white);
+    border-left: 5px solid transparent;
+    transition: all 500ms ease;
+}
+
+.menuLateral:hover{
+    color: var(--black);
+}
+
+.login {
+    display: flex;
+    align-items: center;
+}
+
+.login__img {
+    width:10rem;
+}

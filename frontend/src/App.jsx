@@ -1,9 +1,10 @@
 import "./App.css";
+import MenuLateral from "./Componentes/MenuLateral/MenuLateral";
 
 function App() {
   return (
     <div className="container">
-      <h1>hola</h1>
+     <MenuLateral/>
     </div>
   );
 }
