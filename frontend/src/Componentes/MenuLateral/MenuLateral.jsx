@@ -1,9 +1,11 @@
 import "./MenuLateral.css";
 import login from "../../assets/login.png";
 import lupa from "../../assets/lupa.png";
+import arrow from "../../assets/Arrow 1.png"
 
 export default function MenuLateral() {
   return (
+    <section className="contenedor">
     <div className="menuLateral">
       <div className="login">
         <img className="login__img" src={login} alt="login" />
@@ -19,5 +21,7 @@ export default function MenuLateral() {
       </div>
       <button className="menuLateral__button">Añadir</button>
     </div>
+    <button className="button__esconderse"><img className="button__esconderse__arrow" src={arrow} alt="flecha" /></button>
+    </section>
   );
 }
