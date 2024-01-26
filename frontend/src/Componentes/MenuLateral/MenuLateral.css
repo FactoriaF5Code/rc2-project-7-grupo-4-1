@@ -1,4 +1,5 @@
-:root {
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative&family=Irish+Grover&display=swap"):
+  :root {
   --colorPrincipal: #fdc28c;
   --colorBoton: #f67600;
   --white: #fff;
@@ -7,17 +8,14 @@
 }
 
 .contenedor {
-    display: flex;
-
+  display: flex;
 }
 
 .menuLateral {
-  max-width: 25rem;
   background-color: var(--colorPrincipal);
   top: 0;
   left: 0;
   transition: all 500ms ease;
-  display: block;
   text-decoration: none;
   padding: 20px;
   color: var(--white);
@@ -26,49 +24,8 @@
 }
 
 .mostrar {
-  display: block;
-}
-
-.login {
-  display: flex;
-  align-items: center;
-}
-
-.login__img {
-  width: 10rem;
-}
-.login__img:hover {
-  transform: scale(1.2);
-}
-
-.search {
-  display: flex;
-  align-items: center;
-  margin: 2rem 0;
-}
-
-.search__input {
-  border: none;
-  display: inline-flex;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.39);
-  color: var(--black);
-  height: 3rem;
-  cursor: pointer;
-}
-
-.search__input:hover {
-  color: var(--white);
-}
-
-.search__img {
-  width: 2rem;
-  margin-left: 1rem;
-  cursor: pointer;
-}
-
-.search__img:hover {
-  transform: scale(1.2);
+  width: 50rem;
+  display:flex;
 }
 
 .menuLateral__button {
@@ -78,25 +35,38 @@
   background: var(--colorBoton);
   color: var(--white);
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-transform: uppercase;
+  font-family: "Irish Grover", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
 }
 
 .menuLateral__button:hover {
   transform: scale(1.2);
 }
 
+.menuLateral__button__img {
+  width: 3rem;
+}
+
 .button__mostrarse {
-height: 4.5rem;
-width: 4.5rem;
-border-radius: 10rem;
-background-color: var(--white);
-border: none;
-margin: 3rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 10rem;
+  background-color: var(--white);
+  border: none;
+  margin: 3rem;
 }
 
 .button__mostrarse:hover {
-    transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
 .button__mostrarse__arrow {
-    object-fit: cover;
+  width: 2rem;
 }

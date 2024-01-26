@@ -1,11 +1,15 @@
 import "./App.css";
-import MenuLateral from "./Componentes/MenuLateral/MenuLateral";
+import Header from "./Componentes/Header/Header";
+// import MenuLateral from "./Componentes/MenuLateral/MenuLateral";
 
 function App() {
   return (
+    <>
+    <Header/>
     <div className="container">
-     <MenuLateral/>
+     
     </div>
+    </>
   );
 }
 
