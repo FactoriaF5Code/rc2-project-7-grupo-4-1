@@ -11,7 +11,6 @@ public class DocsRequest {
         this.title = title;
         this.url = url;
         this.comments = comments;
-
     }
 
     public void setId(Long id) {
@@ -28,6 +27,22 @@ public class DocsRequest {
 
     public void setComments(String comments) {
         this.comments = comments;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public String getComments() {
+        return comments;
     }
 
 }

@@ -16,6 +16,17 @@ public class Docs {
     String url;
     String comments;
 
+    public Docs(Long id, String title, String url, String comments) {
+        this.id = id;
+        this.title = title;
+        this.url = url;
+        this.comments = comments;
+    }
+
+    public Docs() {
+
+    }
+
     public Long getId() {
         return id;
     }
@@ -30,17 +41,6 @@ public class Docs {
 
     public String getComments() {
         return comments;
-    }
-
-    public Docs() {
-
-    }
-
-    public Docs(Long id, String title, String url, String comments) {
-        this.id = id;
-        this.title = title;
-        this.url = url;
-        this.comments = comments;
     }
 
 }
