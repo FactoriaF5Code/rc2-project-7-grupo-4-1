@@ -2,14 +2,14 @@ import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
 import { InputText } from "primereact/inputtext";
 import { useState } from "react";
-import icon from "../../assets/icon-plus.png";
+import 'primeicons/primeicons.css';
 import "./Modal.css"
 
 export default function HeadlessDemo() {
   const [visible, setVisible] = useState(false);
   return (
     <div className="card flex justify-content-center ">
-      <Button className="button__modal" label="Añadir" icon={icon} onClick={() => setVisible(true)} />
+      <Button className="button__modal" label="Añadir" icon="pi pi-plus-circle" onClick={() => setVisible(true)} />
       <Dialog className="dialog__size"
         visible={visible}
         modal
