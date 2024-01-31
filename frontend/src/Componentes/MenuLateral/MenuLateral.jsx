@@ -11,11 +11,12 @@ export default function MenuLateral() {
   return (
     <section className="contenedor">
       <div className={`menuLateral ${showMenu ? `mostrar` : ""}`}>
-        <button className="menuLateral__button">
+        <Modal/>
+        {/* <button className="menuLateral__button">
           Añadir
           <Modal />{" "}
           <img className="menuLateral__button__img" src={icon} alt="icono" />
-        </button>
+        </button> */}
       </div>
       <button className="button__mostrarse" onClick={mostrarse}>
         <img className="button__mostrarse__arrow" src={arrow} alt="flecha" />

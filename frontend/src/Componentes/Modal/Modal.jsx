@@ -3,13 +3,14 @@ import { Dialog } from "primereact/dialog";
 import { InputText } from "primereact/inputtext";
 import { useState } from "react";
 import icon from "../../assets/icon-plus.png";
+import "./Modal.css"
 
 export default function HeadlessDemo() {
   const [visible, setVisible] = useState(false);
   return (
     <div className="card flex justify-content-center ">
-      <Button label="Añadir" icon={icon} onClick={() => setVisible(true)} />
-      <Dialog
+      <Button className="button__modal" label="Añadir" icon={icon} onClick={() => setVisible(true)} />
+      <Dialog className="dialog__size"
         visible={visible}
         modal
         onHide={() => setVisible(false)}
@@ -19,7 +20,7 @@ export default function HeadlessDemo() {
             style={{
               borderRadius: "12px",
               backgroundImage:
-                "radial-gradient(circle at left top, var(--primary-400), var(--primary-700))",
+                "radial-gradient(circle at left top, var(--orange-300), var(--orange-400))",
             }}
           >
             <div className="inline-flex flex-column gap-2">
