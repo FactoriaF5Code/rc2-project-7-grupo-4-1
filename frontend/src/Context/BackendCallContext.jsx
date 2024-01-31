@@ -34,7 +34,14 @@ export const BackendCallProvider = ({ children }) => {
       }
     });
   };
+  const contextValue = { docs, setDocs, newDocs, setNewDocs, postdoc };
 
-  return
-  ;
+  return (
+    <BackendCallContext.Provider value={{ contextValue }}>
+      {children}
+    </BackendCallContext.Provider>
+  );
+};
+export const useBackendCallContext = () => {
+  return useContext(BackendCallContext);
 };

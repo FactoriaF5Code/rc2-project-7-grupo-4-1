@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative&family=Irish+Grover&display=swap"):
-  :root {
+  : root {
   --colorPrincipal: #fdc28c;
   --colorBoton: #f67600;
   --white: #fff;
@@ -25,7 +25,7 @@
 
 .mostrar {
   width: 50rem;
-  display:flex;
+  display: flex;
 }
 
 .menuLateral__button {
