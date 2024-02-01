@@ -8,6 +8,11 @@ import "./Modal.css";
 
 export default function Modal() {
   const { newDocs, setNewDocs, postdoc } = useContext(BackendCallContext);
+
+  const handleAddPost = () => {
+    postdoc();
+  };
+
   const [visible, setVisible] = useState(false);
   return (
     <div className="card flex justify-content-center ">
@@ -86,8 +91,8 @@ export default function Modal() {
               <Button
                 label="Añadir"
                 onClick={(e) => {
-                  postdoc(e);
                   hide(e);
+                  handleAddPost(e);
                 }}
                 text
                 className="p-3 w-full text-primary-50 border-1 border-white-alpha-30 hover:bg-white-alpha-10"
