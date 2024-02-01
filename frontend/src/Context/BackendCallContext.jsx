@@ -1,9 +1,10 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
 export const BackendCallContext = createContext();
+
 export const BackendCallProvider = ({ children }) => {
   const [docs, setDocs] = useState([]);
-  const [newDocs, setNewDocs] = useState("");
+  const [newDocs, setNewDocs] = useState({ title: "", url: "", comments: "" });
   const [needsReload, setNeedsReload] = useState(true);
   const URL = "http://localhost:9000/docs";
 
@@ -24,13 +25,17 @@ export const BackendCallProvider = ({ children }) => {
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ newDocs }),
+      body: JSON.stringify(newDocs),
     };
-    fetch(URL, options).then((response) => {
+
+    fetch(URL, options)
+    .then((response) => {
       if (response.ok) {
-        setNewDocs("");
+        setNewDocs({ title: "", url: "", comments: "" });
         setNeedsReload(true);
         alert("realizado con exito");
+      }else {
+        alert("Error al realizar la operación");
       }
     });
   };

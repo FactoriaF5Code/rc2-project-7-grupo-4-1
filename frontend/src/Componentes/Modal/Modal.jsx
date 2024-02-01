@@ -1,16 +1,24 @@
 import { Button } from "primereact/button";
 import { Dialog } from "primereact/dialog";
 import { InputText } from "primereact/inputtext";
-import { useState } from "react";
-import 'primeicons/primeicons.css';
-import "./Modal.css"
+import { useState, useContext } from "react";
+import { BackendCallContext } from "../../Context/BackendCallContext";
+import "primeicons/primeicons.css";
+import "./Modal.css";
 
-export default function HeadlessDemo() {
+export default function Modal() {
+  const { newDocs, setNewDocs, postdoc } = useContext(BackendCallContext);
   const [visible, setVisible] = useState(false);
   return (
     <div className="card flex justify-content-center ">
-      <Button className="button__modal" label="Añadir" icon="pi pi-plus-circle" onClick={() => setVisible(true)} />
-      <Dialog className="dialog__size"
+      <Button
+        className="button__modal"
+        label="Añadir"
+        icon="pi pi-plus-circle"
+        onClick={() => setVisible(true)}
+      />
+      <Dialog
+        className="dialog__size"
         visible={visible}
         modal
         onHide={() => setVisible(false)}
@@ -32,8 +40,12 @@ export default function HeadlessDemo() {
               </label>
               <InputText
                 id="username"
-                label="Username"
+                label="title"
                 className="bg-white-alpha-20 border-none p-3 text-primary-50"
+                value={newDocs && newDocs.title}
+                onChange={(e) =>
+                  setNewDocs({ ...newDocs, title: e.target.value })
+                }
               ></InputText>
             </div>
             <div className="inline-flex flex-column gap-2">
@@ -45,9 +57,12 @@ export default function HeadlessDemo() {
               </label>
               <InputText
                 id="password"
-                label="Password"
+                label="url"
                 className="bg-white-alpha-20 border-none p-3 text-primary-50"
-                type="password"
+                value={newDocs && newDocs.url}
+                onChange={(e) =>
+                  setNewDocs({ ...newDocs, url: e.target.value })
+                }
               ></InputText>
             </div>
             <div className="inline-flex flex-column gap-2">
@@ -61,12 +76,19 @@ export default function HeadlessDemo() {
                 id="username"
                 label="Username"
                 className="bg-white-alpha-20 border-none p-3 text-primary-50"
+                value={newDocs && newDocs.comments}
+                onChange={(e) =>
+                  setNewDocs({ ...newDocs, comments: e.target.value })
+                }
               ></InputText>
             </div>
             <div className="flex align-items-center gap-2">
               <Button
                 label="Añadir"
-                onClick={(e) => hide(e)}
+                onClick={(e) => {
+                  postdoc(e);
+                  hide(e);
+                }}
                 text
                 className="p-3 w-full text-primary-50 border-1 border-white-alpha-30 hover:bg-white-alpha-10"
               ></Button>
