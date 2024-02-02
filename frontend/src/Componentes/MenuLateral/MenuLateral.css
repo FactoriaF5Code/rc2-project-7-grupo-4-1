@@ -51,3 +51,8 @@
 .button__mostrarse__arrow {
   width: 2rem;
 }
+.rotar {
+  transform: rotate(180deg);}
+  .rotar:hover{
+    transform: rotate(180deg);
+  }

@@ -1,17 +1,16 @@
-import "./App.css";
-import Header from "./Componentes/Header/Header";
-import { BackendCallProvider } from "./Context/BackendCallContext";
 
-// import MenuLateral from "./Componentes/MenuLateral/MenuLateral";
+import { DataProvider } from './context/DataContext'; 
+import Header from './Componentes/Header/Header'; 
 
 function App() {
   return (
-    <>
-    <BackendCallProvider>
-    <Header/>
-    </BackendCallProvider>
-    </>
+    <DataProvider>
+      
+      <Header />
+      
+    </DataProvider>
   );
 }
 
 export default App;
+
