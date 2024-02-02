@@ -14,14 +14,15 @@ const ModalForm = ({ newDocs, setNewDocs, onAdd, onCancel }) => {
     >
       <div className="inline-flex flex-column gap-2">
         <label htmlFor="username" className="text--gray-900 font-semibold text-2xl">
-          Titulo
+          Título
         </label>
-        <InputText
+        <InputText 
           id="username"
           label="title"
           className="bg-white-alpha-20 border-none p-3 text-primary-50"
           value={newDocs.title}
           onChange={(e) => setNewDocs({ ...newDocs, title: e.target.value })}
+          placeholder="Ejemplo: Box shadow generator"
         ></InputText>
       </div>
 
@@ -48,6 +49,7 @@ const ModalForm = ({ newDocs, setNewDocs, onAdd, onCancel }) => {
           className="bg-white-alpha-20 border-none p-3 text-primary-50"
           value={newDocs && newDocs.comments}
           onChange={(e) => setNewDocs({ ...newDocs, comments: e.target.value })}
+          placeholder="Ejemplo: Util para hacer app con sombras"
         ></InputText>
       </div>
       <div className="flex align-items-center gap-2">

@@ -28,3 +28,7 @@
 .pi {
   font-size: 2rem;
 }
+
+::placeholder {
+  font-size: 1.5rem;
+}
