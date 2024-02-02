@@ -1,7 +1,7 @@
 .header__container {
   background-image: url("../../assets/zombie.png");
-  height: 950px;
-  background-size: cover;
+  height: 750px;
+  background-size: 100% 100%;
   object-fit: cover;
   background-repeat: no-repeat;
   background-position: center top;
