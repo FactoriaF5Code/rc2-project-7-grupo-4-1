@@ -35,6 +35,7 @@ const ModalForm = ({ newDocs, setNewDocs, onAdd, onCancel }) => {
           className="bg-white-alpha-20 border-none p-3 text-primary-50"
           value={newDocs && newDocs.url}
           onChange={(e) => setNewDocs({ ...newDocs, url: e.target.value })}
+          placeholder="https://www.ejemplo.com/"
         ></InputText>
       </div>
       <div className="inline-flex flex-column gap-2">
