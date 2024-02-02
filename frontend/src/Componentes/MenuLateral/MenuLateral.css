@@ -42,8 +42,8 @@
   height: 4.5rem;
   width: 4.5rem;
   border-radius: 10rem;
-  background-color: var(--white);
-  border: none;
+  background-color: var(--logo);
+  border: 2px solid var(--white);
   margin: 3rem;
 }
 
