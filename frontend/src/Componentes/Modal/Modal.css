@@ -11,7 +11,7 @@
 }
 
 .button__modal {
-  width: 15rem;
+  /* width: 15rem;
   height: 5rem;
   border-radius: 10px;
   background: var(--colorBoton);
@@ -28,7 +28,7 @@
   font-size: 2rem;
   -webkit-box-shadow: 3px 9px 52px 0px rgba(255, 69, 1, 0.75);
   -moz-box-shadow: 3px 9px 52px 0px rgba(255, 69, 1, 0.75);
-  box-shadow: 3px 9px 52px 0px rgba(255, 69, 1, 0.75);
+  box-shadow: 3px 9px 52px 0px rgba(255, 69, 1, 0.75); */
 }
 
 .button__modal:hover {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Dialog } from 'primereact/dialog';
 import { useDataContext } from '../../context/DataContext'; 
 import ModalButton from '../ButtonAdd/ModalButton';
@@ -7,12 +7,13 @@ import 'primeicons/primeicons.css';
 import './Modal.css';
 
 export default function Modal() {
-  const { docs, needsReload, postDoc } = useDataContext();
+  const { postDoc } = useDataContext();
   const [newDocs, setNewDocs] = useState({ title: '', url: '', comments: '' });
   const [visible, setVisible] = useState(false);
 
   const handleAddPost = () => {
     postDoc(newDocs, 'http://localhost:9000/docs'); 
+    setNewDocs({title: "", url: "", comments: ""})
   };
 
   return (
