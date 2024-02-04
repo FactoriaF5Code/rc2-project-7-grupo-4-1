@@ -17,7 +17,7 @@ export default function Modal() {
   };
 
   return (
-    <div className="card flex justify-content-center">
+    <div className="card flex justify-content-center" style={{ height: '42px' }}>
       <ModalButton onClick={() => setVisible(true)} />
       <Dialog
         className="dialog__size"

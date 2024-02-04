@@ -1,0 +1,24 @@
+.contenedor__recursos {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem;
+}
+
+.contenedor__recursos__item {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  margin-top: 3rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  color: #333;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  font-size: 2rem;
+}
+
+.contenedor__recursos__item:hover{
+    color: #000;
+    cursor: pointer;
+}
