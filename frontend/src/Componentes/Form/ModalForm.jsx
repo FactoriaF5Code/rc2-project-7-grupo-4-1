@@ -13,10 +13,13 @@ const ModalForm = ({ newDocs, setNewDocs, onAdd, onCancel }) => {
       }}
     >
       <div className="inline-flex flex-column gap-2">
-        <label htmlFor="username" className="text--gray-900 font-semibold text-2xl">
+        <label
+          htmlFor="username"
+          className="text--gray-900 font-semibold text-2xl"
+        >
           Título
         </label>
-        <InputText 
+        <InputText
           id="username"
           label="title"
           className="bg-white-alpha-20 border-none p-3 text-primary-50"
@@ -27,7 +30,10 @@ const ModalForm = ({ newDocs, setNewDocs, onAdd, onCancel }) => {
       </div>
 
       <div className="inline-flex flex-column gap-2">
-        <label htmlFor="username" className="text--gray-900 font-semibold text-2xl">
+        <label
+          htmlFor="username"
+          className="text--gray-900 font-semibold text-2xl"
+        >
           Url
         </label>
         <InputText
@@ -40,7 +46,10 @@ const ModalForm = ({ newDocs, setNewDocs, onAdd, onCancel }) => {
         ></InputText>
       </div>
       <div className="inline-flex flex-column gap-2">
-        <label htmlFor="username" className="text--gray-900 font-semibold text-2xl">
+        <label
+          htmlFor="username"
+          className="text--gray-900 font-semibold text-2xl"
+        >
           Comentario
         </label>
         <InputText
