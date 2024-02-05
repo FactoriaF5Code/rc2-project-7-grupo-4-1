@@ -1,6 +1,8 @@
 import "./ListadoDocs.css";
-
+import lapiz from "../../assets/lapiz.svg";
 import { useDataContext } from "../../context/DataContext";
+import papelera from "../../assets/papelera.svg";
+
 export default function ListaDocs() {
   const { docs } = useDataContext();
   return (
@@ -13,6 +15,11 @@ export default function ListaDocs() {
             aria-placeholder="hola"
           >
             {doc.title}
+            <div className="contenedor__iconos">
+            <img className="papelera" src={papelera} alt="logo_borrar" />
+            <img className="lapiz" src={lapiz} alt="logo_editar" />
+            
+            </div>
           </div>
         ))}
       </section>

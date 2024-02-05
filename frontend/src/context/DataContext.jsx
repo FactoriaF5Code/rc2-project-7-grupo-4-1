@@ -55,6 +55,17 @@ export const DataProvider = ({ children }) => {
       console.error("Error de red", error);
     }
   };
+  const DeleteDoc = (id) => {
+    fetch(`${URL}/${id}`, {
+      method: "DELETE",
+    })
+      .then(() => {
+        setNeedsReload(true);
+      })
+      .catch((error) => {
+        console.error("Error al borrar", error);
+      });
+  };
 
   useEffect(() => {
     if (needsReload) {
