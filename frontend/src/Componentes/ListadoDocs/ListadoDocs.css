@@ -17,13 +17,20 @@
   align-items: center;
   padding: 1.5rem;
   font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .contenedor__recursos__item:hover {
   color: #000;
   cursor: pointer;
 }
-.contenedor__iconos {
-  display: flex;
-  justify-content: space-between;
+
+.papelera {
+  width: 4rem;
+}
+
+
+.lapiz {
+  width: 4rem;
 }
