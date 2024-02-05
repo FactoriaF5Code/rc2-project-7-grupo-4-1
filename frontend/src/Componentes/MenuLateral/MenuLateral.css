@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative&family=Irish+Grover&display=swap");
- 
+
 :root {
   --colorPrincipal: #fa8e42;
   --colorBoton: #f67600;
@@ -19,7 +19,6 @@
   border-radius: 0.7rem;
   top: 0;
   left: 0;
-  transition: all 500ms ease;
   text-decoration: none;
   padding: 20px;
   color: var(--white);
@@ -28,10 +27,17 @@
 }
 
 .mostrar {
-  background: radial-gradient(circle at left top, #fba86f, var(--colorPrincipal));
-  width: 50rem;
+  background: radial-gradient(
+    circle at left top,
+    #fba86f,
+    var(--colorPrincipal)
+  );
+  width: 90%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  margin-left: 5rem;
+  height: 100vh;
 }
 
 .menuLateral__button__img {
@@ -55,7 +61,8 @@
   width: 2rem;
 }
 .rotar {
-  transform: rotate(180deg);}
-  .rotar:hover{
-    transform: rotate(180deg);
-  }
+  transform: rotate(180deg);
+}
+.rotar:hover {
+  transform: rotate(180deg);
+}
