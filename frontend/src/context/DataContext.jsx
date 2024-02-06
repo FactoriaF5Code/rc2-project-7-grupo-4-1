@@ -55,6 +55,7 @@ export const DataProvider = ({ children }) => {
       console.error("Error de red", error);
     }
   };
+  
   const DeleteDoc = (id) => {
     fetch(`${URL}/${id}`, {
       method: "DELETE",
