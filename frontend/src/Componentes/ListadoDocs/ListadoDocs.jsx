@@ -5,6 +5,7 @@ import papelera from "../../assets/papelera.svg";
 
 export default function ListaDocs() {
   const { docs } = useDataContext();
+  const { DeleteDoc } = useDataContext();
   return (
     <>
       <section className="contenedor__recursos">
@@ -16,7 +17,7 @@ export default function ListaDocs() {
           >
             {doc.title}
             <div className="contenedor__iconos">
-            <img className="papelera" src={papelera} alt="logo_borrar" />
+            <img className="papelera" src={papelera} alt="logo_borrar" onClick={() => DeleteDoc(doc.id)} />
             <img className="lapiz" src={lapiz} alt="logo_editar" />
             
             </div>

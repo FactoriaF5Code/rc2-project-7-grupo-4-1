@@ -57,7 +57,8 @@ export const DataProvider = ({ children }) => {
   };
   
   const DeleteDoc = (id) => {
-    fetch(`${URL}/${id}`, {
+    const URL_Delete = "http://localhost:9000/docs"
+    fetch(`${URL_Delete}/${id}`, {
       method: "DELETE",
     })
       .then(() => {
@@ -79,6 +80,7 @@ export const DataProvider = ({ children }) => {
     needsReload,
     fetchData,
     postDoc,
+    DeleteDoc,
   };
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
