@@ -43,4 +43,23 @@ public class Docs {
         return comments;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
+
+    }
 }

@@ -2,6 +2,7 @@ package org.factoriaf5.backend.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.factoriaf5.backend.Persistence.Docs;
 import org.factoriaf5.backend.Persistence.DocsRepository;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -48,6 +50,21 @@ public class DocsController {
     public ResponseEntity<DocsResponse> deleteDocs(@PathVariable Long id) {
         if (repository.existsById(id)) {
             repository.deleteById(id);
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @PutMapping("/docs/{id}")
+    public ResponseEntity<DocsResponse> putUpdateDocs(@PathVariable Long id, @RequestBody DocsRequest request) {
+        Optional<Docs> optionalDocs = repository.findById(id);
+        if (optionalDocs.isPresent()) {
+            Docs existingDocs = optionalDocs.get();
+            existingDocs.setTitle(request.getTitle());
+            existingDocs.setUrl(request.getUrl());
+            existingDocs.setComments(request.getComments());
+            repository.save(existingDocs);
             return ResponseEntity.noContent().build();
         } else {
             return ResponseEntity.notFound().build();
