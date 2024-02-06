@@ -6,6 +6,7 @@ const DataContext = createContext();
 export const DataProvider = ({ children }) => {
   const [docs, setDocs] = useState([]);
   const [needsReload, setNeedsReload] = useState(true);
+  const URL_Delete = "http://localhost:9000/docs";
 
   const fetchData = async (URL) => {
     try {
@@ -35,7 +36,7 @@ export const DataProvider = ({ children }) => {
     }
   };
 
-  const postDoc = async (newDocs, URL) => {
+  const postDoc = async (newDocs, URL, id) => {
     try {
       const options = {
         method: "POST",
@@ -55,9 +56,28 @@ export const DataProvider = ({ children }) => {
       console.error("Error de red", error);
     }
   };
-  
+
+  const updateDoc = async (id,updatedData) => {
+    try {
+      const options = {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updatedData),
+      };
+
+      const response = await fetch(`${URL_Delete}/${id}`, options);
+      if (response.ok) {
+        setNeedsReload(true);
+        alert("Realizado con éxito");
+      } else {
+        alert("Error al realizar la operación");
+      }
+    } catch (error) {
+      console.error("Error de red", error);
+    }
+  };
+
   const DeleteDoc = (id) => {
-    const URL_Delete = "http://localhost:9000/docs"
     fetch(`${URL_Delete}/${id}`, {
       method: "DELETE",
     })
@@ -68,6 +88,7 @@ export const DataProvider = ({ children }) => {
         console.error("Error al borrar", error);
       });
   };
+
 
   useEffect(() => {
     if (needsReload) {
@@ -81,6 +102,7 @@ export const DataProvider = ({ children }) => {
     fetchData,
     postDoc,
     DeleteDoc,
+    updateDoc,
   };
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
