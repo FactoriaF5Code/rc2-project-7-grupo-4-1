@@ -7,6 +7,7 @@ export const DataProvider = ({ children }) => {
   const [docs, setDocs] = useState([]);
   const [needsReload, setNeedsReload] = useState(true);
   const URL_Delete = "http://localhost:9000/docs";
+  const URL = "http://localhost:9000/docs";
 
   const fetchData = async (URL) => {
     try {
@@ -45,6 +46,7 @@ export const DataProvider = ({ children }) => {
       };
 
       const response = await fetch(URL, options);
+      
       if (response.ok) {
         setDocs([]);
         setNeedsReload(true);
@@ -57,25 +59,23 @@ export const DataProvider = ({ children }) => {
     }
   };
 
-  const updateDoc = async (id,updatedData) => {
-    try {
-      const options = {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(updatedData),
-      };
-
-      const response = await fetch(`${URL_Delete}/${id}`, options);
-      if (response.ok) {
+  const updateDoc = (id, newData) => {
+    fetch(`${URL}/${id}`, {
+      method: "PUT",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newData),
+    })
+      .then(() => {
+        console.log("Documento actualizado con éxito");
         setNeedsReload(true);
-        alert("Realizado con éxito");
-      } else {
-        alert("Error al realizar la operación");
-      }
-    } catch (error) {
-      console.error("Error de red", error);
-    }
+      })
+      .catch((error) => {
+        console.error("Error al actualizar el documento", error);
+      });
   };
+  
 
   const DeleteDoc = (id) => {
     fetch(`${URL_Delete}/${id}`, {
