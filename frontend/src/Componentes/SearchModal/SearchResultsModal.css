@@ -1,0 +1,41 @@
+/* SearchResultsModal.css (o cualquier nombre que elijas) */
+
+.search-results-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+    color: black;
+  }
+  
+  .search-results-modal.open {
+    display: block;
+  }
+  
+  .search-results-modal ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .search-results-modal li {
+    margin-bottom: 10px;
+  }
+  
+  .search-results-modal button {
+    padding: 10px;
+    background-color: #3498db;
+    color: black;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .search-results-modal button:hover {
+    background-color: #2980b9;
+  }
+  
