@@ -1,0 +1,34 @@
+:root {
+  --colorPrincipal: #fa8e42;
+  --colorBoton: #f67600;
+  --white: #fff;
+  --black: #000;
+  --logo: #ff4501;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--colorPrincipal);
+  
+   /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--logo); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 1px solid var(--black); /* creates padding around scroll thumb */
+}
+body::-webkit-scrollbar-thumb:hover{
+  border: 1px solid var(--white);
+  
+}
+

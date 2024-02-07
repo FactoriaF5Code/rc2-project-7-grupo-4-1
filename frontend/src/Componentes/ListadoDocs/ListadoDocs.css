@@ -1,0 +1,55 @@
+:root {
+  --colorPrincipal: #fa8e42;
+  --colorBoton: #f67600;
+  --white: #fff;
+  --black: #000;
+  --logo: #ff4501;
+  --fondoModalEdit: #fb9d5d;
+}
+
+.contenedor__recursos {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem;
+  justify-content: end;
+}
+
+#contenedor__buscador {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 6px;
+  height: 5rem;
+  width: 100%;
+  margin-left: rem;
+  padding: 2rem;
+ top: 0;
+}
+
+.contenedor__recursos__item {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  margin-top: 3rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  color: #333;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contenedor__recursos__item:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.papelera {
+  width: 4rem;
+}
+
+.lapiz {
+  width: 4rem;
+}

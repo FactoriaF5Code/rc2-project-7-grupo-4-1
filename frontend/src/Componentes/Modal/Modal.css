@@ -1,0 +1,15 @@
+:root {
+  --colorPrincipal: #fdc28c;
+  --colorBoton: #f67600;
+  --white: #fff;
+  --black: #000;
+  --logo: #ff4501;
+}
+
+.dialog__size {
+  width: 500px;
+}
+
+.pi {
+    font-size: 2rem;
+}

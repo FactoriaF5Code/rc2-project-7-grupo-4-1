@@ -1,13 +1,16 @@
-import './App.css'
+
+import { DataProvider } from './context/DataContext'; 
+import Header from './Componentes/Header/Header'; 
 
 function App() {
-  
-
   return (
-    <>
-    <h1>hola</h1>
-    </>
-  )
+    <DataProvider>
+      
+      <Header />
+      
+    </DataProvider>
+  );
 }
 
-export default App
+export default App;
+
