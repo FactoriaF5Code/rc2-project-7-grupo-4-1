@@ -1,41 +1,60 @@
 /* SearchResultsModal.css (o cualquier nombre que elijas) */
+:root {
+  --colorPrincipal: #fa8e42;
+  --colorBoton: #f67600;
+  --white: #fff;
+  --black: #000;
+  --logo: #ff4501;
+  --fondoModalEdit: #fb9d5d;
+}
 
 .search-results-modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: none;
-    color: black;
-  }
-  
-  .search-results-modal.open {
-    display: block;
-  }
-  
-  .search-results-modal ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .search-results-modal li {
-    margin-bottom: 10px;
-  }
-  
-  .search-results-modal button {
-    padding: 10px;
-    background-color: #3498db;
-    color: black;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .search-results-modal button:hover {
-    background-color: #2980b9;
-  }
-  
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 400px;
+  width: 90%;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  background-color: var(--fondoModalEdit);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none;
+  font-size: 1.5rem;
+}
+
+.search-results-modal.open {
+  display: block;
+}
+
+.search-results-modal ul {
+  list-style: none;
+  padding: 0;
+}
+
+.search-results-modal li {
+  margin-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.search-results-modal button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  background-color: transparent; /* Color de fondo de los botones */
+  color: var(--white); /* Color del texto de los botones */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.search-results-modal button:hover {
+  color: #000;
+}

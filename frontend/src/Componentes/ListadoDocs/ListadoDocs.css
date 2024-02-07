@@ -1,8 +1,27 @@
+:root {
+  --colorPrincipal: #fa8e42;
+  --colorBoton: #f67600;
+  --white: #fff;
+  --black: #000;
+  --logo: #ff4501;
+  --fondoModalEdit: #fb9d5d;
+}
+
 .contenedor__recursos {
   display: flex;
   flex-direction: column;
   margin-top: 6rem;
   justify-content: end;
+}
+
+#contenedor__buscador {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 6px;
+  height: 5rem;
+  width: 40rem;
+  margin-left: 47rem;
+  padding: 2rem;
 }
 
 .contenedor__recursos__item {
@@ -29,7 +48,6 @@
 .papelera {
   width: 4rem;
 }
-
 
 .lapiz {
   width: 4rem;

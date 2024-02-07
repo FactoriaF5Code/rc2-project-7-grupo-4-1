@@ -1,5 +1,5 @@
 // ListaDocs.js
-import React, { useState } from 'react';
+import { useState } from 'react';
 import "./ListadoDocs.css";
 import lapiz from "../../assets/lapiz.svg";
 import papelera from "../../assets/papelera.svg";
@@ -56,7 +56,7 @@ export default function ListaDocs() {
     <>
       <section className="contenedor__recursos">
         {/* Input de búsqueda */}
-        <input
+        <input id='contenedor__buscador'
           type="text"
           placeholder="Buscar..."
           value={searchTerm}

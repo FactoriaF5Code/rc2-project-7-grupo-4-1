@@ -1,6 +1,5 @@
 import { Button } from "primereact/button";
 
-
 export default function ButtonModal({ onClick }) {
   return (
     <Button

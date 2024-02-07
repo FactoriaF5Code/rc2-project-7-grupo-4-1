@@ -1,10 +1,9 @@
 // EditModal.js
-import React, { useState, useEffect } from 'react';
-import { useDataContext } from '../../context/DataContext';
+import { useState, useEffect } from 'react';
 import './EditModal.css';
 
 const EditModal = ({ isOpen, onClose, onSave, initialData }) => {
-  const { updateDoc } = useDataContext();
+ 
   const [editedData, setEditedData] = useState(initialData || {});
 
   useEffect(() => {
@@ -24,7 +23,8 @@ const EditModal = ({ isOpen, onClose, onSave, initialData }) => {
   };
 
   return (
-    <div className={`edit-modal ${isOpen ? 'open' : 'closed'}`}>
+    <section className='overlay'>
+    <div id='editContainer' className={`edit-modal ${isOpen ? 'open' : 'closed'}`}>
       <div className="modal-content">
         <h2>Edit Document</h2>
         <label>Title:</label>
@@ -48,10 +48,13 @@ const EditModal = ({ isOpen, onClose, onSave, initialData }) => {
           value={editedData.comments || ''}
           onChange={handleInputChange}
         />
+        <div className='container__buton__añadir'>
         <button onClick={handleSave}>Save</button>
         <button onClick={onClose}>Exit</button>
+        </div>
       </div>
     </div>
+    </section>
   );
 };
 
