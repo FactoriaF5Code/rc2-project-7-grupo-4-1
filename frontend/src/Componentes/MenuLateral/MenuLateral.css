@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Cinzel+Decorative&family=Irish+Grover&display=swap");
+
+:root {
+  --colorPrincipal: #fa8e42;
+  --colorBoton: #f67600;
+  --white: #fff;
+  --black: #000;
+  --logo: #ff4501;
+}
+
+.contenedor {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.menuLateral {
+  background-color: var(--colorPrincipal);
+  border-radius: 0.7rem;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  padding: 20px;
+  color: var(--white);
+  border-left: 5px solid transparent;
+  display: none;
+}
+
+.mostrar {
+  background: radial-gradient(
+    circle at left top,
+    #fba86f,
+    var(--colorPrincipal)
+  );
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 5rem;
+  height: 100vh;
+}
+
+.menuLateral__button__img {
+  width: 3rem;
+}
+
+.button__mostrarse {
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 10rem;
+  background-color: var(--logo);
+  border: 2px solid var(--white);
+  margin: 3rem;
+}
+
+.button__mostrarse:hover {
+  transform: scale(1.1);
+}
+
+.button__mostrarse__arrow {
+  width: 2rem;
+}
+.rotar {
+  transform: rotate(180deg);
+}
+.rotar:hover {
+  transform: rotate(180deg);
+}
